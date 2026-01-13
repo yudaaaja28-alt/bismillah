@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senja Luxe Coffee - Premium Menu</title>
+    <link rel="stylesheet" href="isi.css">
+    <script src="menarik.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="luxury-bg">
+        <header>
+            <div class="logo">☕ Senja Luxe Coffee</div>
+            <p class="tagline">Where Every Drop is Gold</p>
+        </header>
+
+        <main class="menu-grid">
+            <div class="card">
+                <div class="card-content">
+                    <div class="text-side">
+                        <h3>Espresso</h3>
+                        <p class="price">Rp 45.000</p>
+                        <button class="order-btn" onclick="showPayment('Espresso', 45000)">ORDER</button>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?q=80&w=200" alt="Espresso">
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content">
+                    <div class="text-side">
+                        <h3>Cappuccino</h3>
+                        <p class="price">Rp 55.000</p>
+                        <button class="order-btn" onclick="showPayment('Cappuccino', 55000)">ORDER</button>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1534706936160-d5bb67c3dff4?q=80&w=200" alt="Cappuccino">
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content">
+                    <div class="text-side">
+                        <h3>Caramel Latte</h3>
+                        <p class="price">Rp 60.000</p>
+                        <button class="order-btn" onclick="showPayment('Caramel Latte', 60000)">ORDER</button>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?q=80&w=200" alt="Caramel Latte">
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div id="paymentModal" class="modal-overlay">
+        <div class="modal-card">
+            <span class="close-btn" onclick="closePayment()">&times;</span>
+            <h4 class="modal-title">COMPLETE YOUR PAYMENT</h4>
+            <p id="paymentDetail" class="modal-detail"></p>
+            
+            <div class="qris-container">
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=SenjaLuxePayment" alt="QRIS Code">
+            </div>
+            
+            <p class="modal-note">Scan using your preferred m-banking or e-wallet app</p>
+            <button class="pay-confirm-btn" onclick="closePayment()">PAY WITH QRIS</button>
+        </div>
+    </div>
+
+</body>
+</html>

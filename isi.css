@@ -1,0 +1,172 @@
+:root {
+    --gold: #d4af37;
+    --dark: #1a1a1a;
+    --soft-dark: #2a2a2a;
+    --white: #ffffff;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--dark);
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+}
+
+.luxury-bg {
+    width: 100%;
+    max-width: 500px;
+    min-height: 100vh;
+    padding: 40px 20px;
+    background: radial-gradient(circle at top, #333 0%, #1a1a1a 100%);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--gold);
+}
+
+.tagline {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    opacity: 0.8;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.menu-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card {
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 15px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    border-color: var(--gold);
+    transform: translateY(-5px);
+}
+
+.card-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text-side h3 {
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+}
+
+.price {
+    color: var(--gold);
+    font-weight: 300;
+    margin: 5px 0 15px 0;
+}
+
+.order-btn {
+    background-color: var(--gold);
+    color: black;
+    border: none;
+    padding: 8px 25px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* MODAL / PAYMENT POPUP */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.85);
+    z-index: 100;
+    backdrop-filter: blur(8px);
+}
+
+.modal-card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--soft-dark);
+    width: 85%;
+    max-width: 350px;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    border: 1px solid var(--gold);
+}
+
+.close-btn {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--gold);
+}
+
+.modal-title {
+    color: var(--gold);
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.modal-detail {
+    font-size: 0.8rem;
+    opacity: 0.7;
+    margin-bottom: 20px;
+}
+
+.qris-container {
+    background: white;
+    padding: 10px;
+    display: inline-block;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.modal-note {
+    font-size: 0.7rem;
+    opacity: 0.6;
+    margin-bottom: 20px;
+}
+
+.pay-confirm-btn {
+    background: transparent;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    padding: 10px 30px;
+    border-radius: 25px;
+    width: 100%;
+    cursor: pointer;
+    font-weight: bold;
+}
